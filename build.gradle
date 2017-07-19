@@ -1,0 +1,29 @@
+group 'com.guidewire.btr'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'gradle-one-jar'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile group: 'com.google.guava', name: 'guava', version: '19.0'
+  compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+  compile group: 'com.beust', name: 'jcommander', version: '1.72'
+}
+
+task awesomeFunJar(type: OneJar, dependsOn: clean) {
+  mainClass = 'com.guidewire.btr.MainProgram'
+}

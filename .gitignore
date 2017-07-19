@@ -1,0 +1,34 @@
+# IntelliJ ignores
+.idea/*
+*.iml
+*.iws
+*.ipr
+
+# Gradle ignores
+.gradle/*
+*/.gradle/*
+
+# Eclipse ignores (in case anyone's using it)
+.classpath
+.project
+.settings/
+
+# General ignores
+log/
+target/
+build/
+out/
+classes/
+
+# Mac OS X
+.DS_Store
+._*
+
+# CLI Output
+/*.xlf
+/*.tmx
+/*.zip
+/*.dot
+/*.png
+/*.sdltm
+/*.txt
